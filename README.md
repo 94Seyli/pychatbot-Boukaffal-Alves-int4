@@ -7,5 +7,3 @@ Inscription for use :
 any dependencies to be installed :
 
 list of know bugs :
-
-test
