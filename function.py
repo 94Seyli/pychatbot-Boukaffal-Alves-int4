@@ -2,9 +2,6 @@
 import os
 import random
 import math
-import tkinter as tk
-from tkinter import messagebox, scrolledtext, PhotoImage, Canvas
-
 
 # _________________________Basic functions_________________________#
 # function to run through the list of files with a given extension and in a given directory and return a list of names
