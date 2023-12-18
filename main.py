@@ -153,7 +153,7 @@ if __name__ == "__main__":
               "- To display the most important word by Chirac, enter 3\n"
               "- To display the presidents who talk about the Nation, as well as the one who talks about it the most, enter 4\n"
               "- To display the president who speaks most about ecology, enter 5\n"
-              "- Sorry, this command is not available at the moment : (To access the bot, enter 0.)\n")
+              "- Sorry, this command is not available at the moment (as normal, this command allows you to chat with the chatbot) \n")
         value_menu = saisie()  #Enter a character (number from 0 to 5) (the word is saisie beacause we have a bug withh words entry and input
         if value_menu == 1:
             print("\n- Here are the least important words\n")
