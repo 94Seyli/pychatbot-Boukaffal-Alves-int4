@@ -149,7 +149,7 @@ if __name__ == "__main__":
               "- To display the presidents who talk about the Nation, as well as the one who talks about it the most, enter 4\n"
               "- To display the president who speaks most about ecology, enter 5\n"
               "- Sorry, this command is not available at the moment : (To access the bot, enter 0.)\n")
-        value_menu = entry()  # Saisie d'un caractère (nombre de 0 à 5)
+        value_menu = saisie()  #Enter a character (number from 0 to 5)
         if value_menu == 1:
             print("\n- Voici les mots les moins importants\n")
             for i in range(len(word_not_important)):
