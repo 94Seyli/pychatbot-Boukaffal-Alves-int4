@@ -1,5 +1,7 @@
+# _________________________Modules_________________________#
 from function import *
 
+# _________________________functions to run the code_________________________#
 if __name__ == "__main__":
 
     # Call of the function
@@ -116,7 +118,7 @@ if __name__ == "__main__":
             ecolo_index = i
             break
 
-    # Find the highest score for 'climate'.
+    # Find the highest score for 'climate / ecology'.
     score_max = 0
     ecolo_index_president = 0
     for j in range(1, len(Matrix[ecolo_index])):
@@ -165,6 +167,4 @@ if __name__ == "__main__":
         elif value_menu == 5:
             print("\n-", president_ecolo, "est le président qui parle le plus du climat\n")
         elif value_menu == 0:
-            flag = False
-        else:
             print("Choix incorrect, retour au menu")
