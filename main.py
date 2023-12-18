@@ -1,4 +1,4 @@
-from function3 import *
+from function import *
 
 if __name__ == "__main__":
 
