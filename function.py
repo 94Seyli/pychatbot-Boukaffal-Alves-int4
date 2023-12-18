@@ -262,7 +262,6 @@ def cross_word_question_corpus(matrix_corpus, matrix_question):
         for i in range(len(matrix_corpus)):
             if matrix_question[h][0] == matrix_corpus[i][0]:
                 matrix_dimension_M.append(matrix_corpus[i])
-
     return matrix_dimension_M
 
 
@@ -285,24 +284,6 @@ def display_less_important_words(word_not_important):
     set_word_not_important = ""
     for i in range(len(word_not_important)):
         set_word_not_important = set_word_not_important + word_not_important[i] + "\n"
-    # Create a new top-level window
-    dialog = tk.Toplevel()
-    dialog.title("Words Less Importants")
-    dialog.geometry("1000x300")  # Set your desired size
-
-    # Create a scrolled text widget for displaying information
-    txt = scrolledtext.ScrolledText(dialog, wrap=tk.WORD, width=40, height=10)
-    txt.pack(padx=10, pady=10)
-
-    # Inserting some text (replace this with your actual content)
-    txt.insert(tk.INSERT, set_word_not_important)
-
-    # Disable editing of the text
-    txt.configure(state='disabled')
-
-    # Button to close the dialog
-    btn_close = tk.Button(dialog, text="Close", command=dialog.destroy)
-    btn_close.pack(pady=10)
 
 def display_most_important_words(word_import_folder):
     # Logic for displaying the most important words
@@ -317,8 +298,7 @@ def display_presi_nation(president_nation, presi_nation):
     for i in range(len(president_nation)):
         string = string + president_nation[i]
     # Logic for displaying the most important words
-    messagebox.showinfo("Here are the presidents talking about Nation :\n", string, "\n-", presi_nation,
-                        "speaks most of Nation")
+    messagebox.showinfo("Here are the presidents talking about Nation :\n", string, "\n-", presi_nation, "speaks most of Nation")
 
 def display_presi_ecolo(president_ecolo):
     # Logic for displaying the most important words
