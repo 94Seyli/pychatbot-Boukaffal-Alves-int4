@@ -140,7 +140,7 @@ if __name__ == "__main__":
     if ecolo_index_president == 8:
         president_ecolo = "Sarkozy"
 
-    # Main menu loop
+#_______________________________Console Menu_______________________________#
     flag = True
     while flag:
         print("\n--- Menu ---\n\n"
