@@ -213,20 +213,8 @@ def TFIDF_matrix(directory):
     return matrix
 
 
-# ----------------------------------
-'''
-       Input function for a number between 0 and 9.
-
-       No input arguments.
-
-       Output:
-       - value: int
-           Numeric value between 0 and 9 (a single character entered).
-
-       The function uses a loop to ensure correct and valid input.
-       If the input contains more than one character, the function ignores the input and continues the loop.
-       If the input is a number between 0 and 5, the function returns this value as an integer.
-       '''
+#_____________________Main Menu_____________________#
+#function wich use a loop to ensure correct and valid input.
 def entry():
     flag = True
     entry = ""
@@ -237,31 +225,6 @@ def entry():
         elif ord(entry) > 47 and ord(entry) < 54:  # Entry is a number between 0 and 9
             return int(entry)
 
-
-def word_question(string):
-    list = []
-    word = ""
-    string = string + " "
-    for i in range(len(string)):
-        if string[i] != " ":
-            word = word + string[i]
-        else:
-            if word == "d" or word == "j" or word == "s" or word == "n":  #Otherwise add an e after the letters d, j, s, n
-                word = word + "e"
-            if word == "c":  # if it's a c, add an ela
-                word = word + "ela"
-            if word == "l":  # if it's an l, there's a 50/50 chance that it's an a or an e
-                a_or_e = random.randint(1, 2)
-                if a_or_e == 1:
-                    word = word + "e"
-                else:
-                    word = word + "a"
-            if word not in list:  # if the content of the variable word is in the collection, add 1
-                list.append(word)
-            word = ""
-    return list
-
-
 def important_word(list, matrix):
     word_list = []
     for word in list:
@@ -271,13 +234,11 @@ def important_word(list, matrix):
                     word_list.append(word)
     return word_list
 
-
 def cpt_word_question(coll):
     cpt_total = 0
     for number in coll.values():
         cpt_total = cpt_total + number
     return cpt_total
-
 
 def matrix_filtre_matrix(coll, matrix, coll_IDF):
     matrix = []
@@ -295,7 +256,6 @@ def matrix_filtre_matrix(coll, matrix, coll_IDF):
         print(matrix)
     return matrix
 
-
 def cross_word_question_corpus(matrix_corpus, matrix_question):
     matrix_dimension_M = []
     for h in range(len(matrix_question)):
@@ -310,7 +270,6 @@ def file_clean_to_speach(file):
     file = file[8:]
     return file
 
-
 def important_word_question(matrix_question):
     for i in range(1, len(matrix_question) - 1):
         if matrix_question[i][1] > matrix_question[i + 1][1]:
@@ -321,7 +280,7 @@ def important_word_question(matrix_question):
     return impactant_word
 
 
-# ______________________________Response-PART-II______________________________#
+# ______________________________Response-PART-I______________________________#
 def display_less_important_words(word_not_important):
     set_word_not_important = ""
     for i in range(len(word_not_important)):
@@ -345,22 +304,13 @@ def display_less_important_words(word_not_important):
     btn_close = tk.Button(dialog, text="Close", command=dialog.destroy)
     btn_close.pack(pady=10)
 
-
 def display_most_important_words(word_import_folder):
     # Logic for displaying the most important words
     messagebox.showinfo("Here is the most important word in the directory :\n", word_import_folder)
 
-
-# Variable globale pour stocker le text entré
-question = ""
-
-
 def display_most_important_words_Chirac(word_import_chirac):
     # Logic for displaying the most important words
     messagebox.showinfo("more important words", "more important words here :\n" + word_import_chirac)
-
-
-# Variable globale pour stocker le text entré
 
 def display_presi_nation(president_nation, presi_nation):
     string = ""
@@ -369,9 +319,6 @@ def display_presi_nation(president_nation, presi_nation):
     # Logic for displaying the most important words
     messagebox.showinfo("Here are the presidents talking about Nation :\n", string, "\n-", presi_nation,
                         "speaks most of Nation")
-
-
-# Variable globale pour stocker le text entré
 
 def display_presi_ecolo(president_ecolo):
     # Logic for displaying the most important words
