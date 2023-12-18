@@ -230,7 +230,7 @@ def TFIDF_matrix(directory):
        '''
 
 
-def saisie():
+def entry():
     flag = True
     entry = ""
     while flag:
