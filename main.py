@@ -156,7 +156,7 @@ if __name__ == "__main__":
               "- Sorry, this command is not available at the moment : (To access the bot, enter 0.)\n")
         value_menu = saisie()  #Enter a character (number from 0 to 5) (the word is saisie beacause we have a bug withh words entry and input
         if value_menu == 1:
-            print("\n- Voici les mots les moins importants\n")
+            print("\n- Here are the least important words\n")
             for i in range(len(word_not_important)):
                 print(word_not_important[i])
         elif value_menu == 2:
