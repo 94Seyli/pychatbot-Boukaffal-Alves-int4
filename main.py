@@ -56,6 +56,17 @@ if __name__ == "__main__":
                 highest_score = Matrix[i][j]
                 word_import_folder = Matrix[i][0]
 
+        # Initialise variables to store the word with the highest score
+        highest_score = 0
+        word_import_chirac = ""
+
+        # Iteration on each row and column of the Matrix (ignoring the first row and column)
+        for i in range(1, len(Matrix)):
+            for j in range(1, len(Matrix[i])):
+                if Matrix[i][j] > highest_score:
+                    highest_score = Matrix[i][j]
+                    word_import_chirac = Matrix[i][0]
+
     president_nation = []
     index_word_nation = 0
     for i in range(len(Matrix)):
@@ -143,7 +154,7 @@ if __name__ == "__main__":
               "- To display the presidents who talk about the Nation, as well as the one who talks about it the most, enter 4\n"
               "- To display the president who speaks most about ecology, enter 5\n"
               "- Sorry, this command is not available at the moment : (To access the bot, enter 0.)\n")
-        value_menu = entry()  #Enter a character (number from 0 to 5)
+        value_menu = saisie()  #Enter a character (number from 0 to 5) (the word is saisie beacause we have a bug withh words entry and input
         if value_menu == 1:
             print("\n- Voici les mots les moins importants\n")
             for i in range(len(word_not_important)):

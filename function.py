@@ -220,7 +220,7 @@ def TFIDF_matrix(directory):
 
 #_____________________Main Menu_____________________#
 #function wich use a loop to ensure correct and valid input.
-def entry():
+def saisie():
     flag = True
     entry = ""
     while flag:
