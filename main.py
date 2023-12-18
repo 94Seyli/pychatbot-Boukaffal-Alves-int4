@@ -1,4 +1,3 @@
-# 16/12 23h
 from function3 import *
 
 if __name__ == "__main__":
