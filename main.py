@@ -52,17 +52,6 @@ if __name__ == "__main__":
                 highest_score = Matrix[i][j]
                 word_import_folder = Matrix[i][0]
 
-    # Initialise variables to store the word with the highest score
-    highest_score = 0
-    word_import_chirac = ""
-
-    # Iteration on each row and column of the Matrix (ignoring the first row and column)
-    for i in range(1, len(Matrix)):
-        for j in range(1, 3):
-            if Matrix[i][j] > highest_score:
-                highest_score = Matrix[i][j]
-                word_import_chirac = Matrix[i][0]
-
     president_nation = []
     index_word_nation = 0
     for i in range(len(Matrix)):
