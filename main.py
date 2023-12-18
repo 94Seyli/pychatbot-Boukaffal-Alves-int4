@@ -164,10 +164,10 @@ if __name__ == "__main__":
         elif value_menu == 3:
             print("\n- Here's the most important word in Chirac's speeches : ", word_import_chirac)
         elif value_menu == 4:
-            print("\n- Voici les présidents parlant de Nation\n")
+            print("\n- Here are the presidents talking about Nation\n")
             for i in range(len(president_nation)):
                 print(president_nation[i])
-            print("\n-", presi_nation, "parle le plus de Nation")
+            print("\n-", presi_nation, "speaks most of Nation")
         elif value_menu == 5:
             print("\n-", president_ecolo, "est le président qui parle le plus du climat\n")
         elif value_menu == 0:
