@@ -162,7 +162,7 @@ if __name__ == "__main__":
         elif value_menu == 2:
             print("\n- Here is the most important word in the file :\n", word_import_folder)
         elif value_menu == 3:
-            print("\n- Voici le mot le plus important des discours de Chirac : ", word_import_chirac)
+            print("\n- Here's the most important word in Chirac's speeches : ", word_import_chirac)
         elif value_menu == 4:
             print("\n- Voici les présidents parlant de Nation\n")
             for i in range(len(president_nation)):
