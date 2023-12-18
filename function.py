@@ -93,7 +93,6 @@ def cleaned(files_list):
 
 
 # _______________________________TF-IDF_______________________________#
-
 # function to scan line of string and return a collection with the words of strings
 def scan_line(string):
     coll = {}
@@ -104,22 +103,22 @@ def scan_line(string):
         if string[i] != " ":
             word = word + string[i]
         else:
-            if word == "d" or word == "j" or word == "s" or word == "n":  # otherwise add an e after the letters d, j, s, n
+            if word == "d" or word == "j" or word == "s" or word == "n":
                 word = word + "e"
-            if word == "c":  # if it's a c, add an ela
+            if word == "c":
                 word = word + "ela"
-            if word == "l":  # if it's an l, there's a 50/50 chance that it's an a or an e
+            if word == "l":
                 a_or_e = random.randint(1, 2)
                 if a_or_e == 1:
                     word = word + "e"
                 else:
                     word = word + "a"
-                if word in coll:  # if the content of the variable word is in the collection, add 1
+                if word in coll:
                     coll[word] = coll[word] + 1
                 else:
                     coll[word] = 1
             else:
-                if word in coll:  # if the content of the variable word is in the collection, add 1
+                if word in coll:
                     coll[word] = coll[word] + 1
                 else:
                     coll[word] = 1
@@ -228,8 +227,6 @@ def TFIDF_matrix(directory):
        If the input contains more than one character, the function ignores the input and continues the loop.
        If the input is a number between 0 and 5, the function returns this value as an integer.
        '''
-
-
 def entry():
     flag = True
     entry = ""
