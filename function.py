@@ -299,43 +299,6 @@ def matrix_filtre_matrix(coll, matrix, coll_IDF):
     return matrix
 
 
-"""
-#Calculating similarity between two vectors
-def scale_product(A,B,column_A,column_B):
-    sum = 0
-    for i in range (1,len(A)):
-        sum = sum + A[i][column_A]*B[i][column_B]
-    return sum
-
-def vector_norm(A, column):
-    sum = 0
-    for i in range(1,len(A)):
-        sum = sum + A[i][column]**2
-    sum = sum**0.5
-    return sum
-
-
-    Calculates the similarity (cosine) between two vectors.
-    Args:
-    A, B (list): Two lists representing the vectors.
-    column_A, column_B (int): Column indexs to be used in vectors A and B.
-    Returns:
-    float: Cosine similarity between vectors A and B.
-def similarity_calculation(A, B, column_A, column_B):
-    norms_product = vector_norm(A, column_A) * vector_norm(B, column_B)
-    if norms_product == 0:
-        return 0  #Avoid division by zero
-    return scale_product(A, B, column_A, column_B) / norms_product
-
-def similarity(matrix_question_M, matrix_corpus_M):
-    collection_similarity_vector = {}
-    for i in range(1, len(matrix_corpus_M[0])):
-        similarity_score = similarity_calculation(matrix_question_M, matrix_corpus_M, 1, i)
-        collection_similarity_vector[matrix_corpus_M[0][i]] = similarity_score  #Rounded to match desired format
-    return collection_similarity_vector
-"""
-
-
 def cross_word_question_corpus(matrix_corpus, matrix_question):
     matrix_dimension_M = []
     for h in range(len(matrix_question)):
@@ -344,16 +307,6 @@ def cross_word_question_corpus(matrix_corpus, matrix_question):
                 matrix_dimension_M.append(matrix_corpus[i])
 
     return matrix_dimension_M
-
-
-"""
-def file_similarity(coll):
-    print(coll)
-    highest_value = max(coll.values())  #Finding the greatest value
-    for file, value in coll.items():
-        if value == highest_value:
-            return file  #Return the corresponding file
-"""
 
 
 def file_clean_to_speach(file):
@@ -369,37 +322,6 @@ def important_word_question(matrix_question):
             index_i = i + 1
     impactant_word = matrix_question[index_i][0]
     return impactant_word
-
-
-"""
-def sentence_prompt(file_speech,word):
-    string_punctuation = " -,?:;.'()"
-    phrase_1 = ""
-    phrase_x = ""
-    with open("./speeches/"+file_speech,"r") as f:
-        content = f.read()
-        content = content.replace("\n"," ")
-        for i in range (len(content)):
-            if content[i] != chr(46):
-                phrase_1 = phrase_1 + content[i]
-            else:
-                break
-
-        if word in lower_case(punctuation_str(phrase_1)):
-            if lower_case(punctuation_str(phrase_x + content[i + 1])) not in string_punctuation:
-                return phrase_1.lower() + chr(46)
-        else:
-            for i in range(len(phrase_1),len(content)):
-
-                if content[i] != chr(46):
-                    phrase_x = phrase_x + content[i]
-                else:
-                    if word in lower_case(punctuation_str(phrase_x)) :
-                        if lower_case(punctuation_str(phrase_x + content[i + 1])) not in string_punctuation:
-                            return phrase_x.lower() + chr(46)
-                    else:
-                        phrase_x = ""
-"""
 
 
 # ______________________________Response-PART-II______________________________#
