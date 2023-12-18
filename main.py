@@ -169,6 +169,6 @@ if __name__ == "__main__":
                 print(president_nation[i])
             print("\n-", presi_nation, "speaks most of Nation")
         elif value_menu == 5:
-            print("\n-", president_ecolo, "est le président qui parle le plus du climat\n")
+            print("\n-", president_ecolo, "is the president who talks most about the climate\n")
         elif value_menu == 0:
             print("Choix incorrect, retour au menu")
