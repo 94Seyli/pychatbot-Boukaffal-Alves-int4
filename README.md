@@ -6,7 +6,7 @@ Inscription for use :
 To use the code, just launch the main file and run it. Then follow the instructions in your software's console.
 
 Any dependencies to be installed :
-- python
+- python.exe
 
 list of know bugs :
 - In the console, words are not displayed with accents. 
