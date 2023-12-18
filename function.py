@@ -1,4 +1,9 @@
-# _________________________Modules_________________________#
+"""
+PychatBot - int4
+Ilyes Boukaffal & Pedro Alves
+This file contains all the functions needed for the code to work properly.
+"""
+#_________________________Modules_________________________#
 import os
 import random
 import math

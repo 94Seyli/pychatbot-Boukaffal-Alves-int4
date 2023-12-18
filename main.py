@@ -1,3 +1,9 @@
+"""
+PychatBot - int4
+Ilyes Boukaffal & Pedro Alves
+principal file of the project. Can display the menu and use the functions of the other file
+"""
+
 # _________________________Modules_________________________#
 from function import *
 
@@ -20,14 +26,13 @@ if __name__ == "__main__":
 
     files_into_speeches = [f for f in os.listdir('./speeches-20231123') if f.endswith('.txt')]
 
-    # Calling cleaning function
+    #Calling cleaning function
     cleaned(files_into_speeches)
 
     coll_IDF = IDF_score_coll(directory_cleaned)
-
     Matrix = TFIDF_matrix(directory_cleaned)
 
-    # To display the Matrix
+    #function to isplay the Matrix
     for i in range(len(Matrix)):
         print(Matrix[i])
 
@@ -41,11 +46,11 @@ if __name__ == "__main__":
             if sum_TF_IDF == 0:
                 word_not_important.append(Matrix[j][0])
 
-    # Initialise variables to store the word with the highest score
+    #Initialise variables to store the word with the highest score
     highest_score = 0
     word_import_folder = ""
 
-    # Iteration on each row and column of the Matrix (ignoring the first row and column)
+    #Iteration on each row and column of the Matrix (ignoring the first row and column)
     for i in range(1, len(Matrix)):
         for j in range(1, len(Matrix[i])):
             if Matrix[i][j] > highest_score:
