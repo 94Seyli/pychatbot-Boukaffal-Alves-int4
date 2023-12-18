@@ -160,7 +160,7 @@ if __name__ == "__main__":
             for i in range(len(word_not_important)):
                 print(word_not_important[i])
         elif value_menu == 2:
-            print("\n- Voici le mot le plus important du dossier :\n", word_import_folder)
+            print("\n- Here is the most important word in the file :\n", word_import_folder)
         elif value_menu == 3:
             print("\n- Voici le mot le plus important des discours de Chirac : ", word_import_chirac)
         elif value_menu == 4:
