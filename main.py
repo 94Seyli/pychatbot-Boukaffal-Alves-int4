@@ -171,4 +171,4 @@ if __name__ == "__main__":
         elif value_menu == 5:
             print("\n-", president_ecolo, "is the president who talks most about the climate\n")
         elif value_menu == 0:
-            print("Choix incorrect, retour au menu")
+            print("Incorrect choice, return to menu")
