@@ -3,7 +3,6 @@ PychatBot - int4
 Ilyes Boukaffal & Pedro Alves
 principal file of the project. Can display the menu and use the functions of the other file
 """
-
 # _________________________Modules_________________________#
 from function import *
 
