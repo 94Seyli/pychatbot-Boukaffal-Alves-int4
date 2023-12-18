@@ -249,7 +249,7 @@ def word_question(string):
         if string[i] != " ":
             word = word + string[i]
         else:
-            if word == "d" or word == "j" or word == "s" or word == "n":  # otherwise add an e after the letters d, j, s, n
+            if word == "d" or word == "j" or word == "s" or word == "n":  #Otherwise add an e after the letters d, j, s, n
                 word = word + "e"
             if word == "c":  # if it's a c, add an ela
                 word = word + "ela"
