@@ -12,3 +12,6 @@ list of know bugs :
 - In the console, words are not displayed with accents. 
 - Command number two does not return a response 
 - The chat bot has a lot of problems, so we decided to remove the functions dedicated to it.
+
+Content :
+This Project content a main.py file, a function.py file / a directory called speeches-20231123 / this README.md file / a report PDF in french / a report PDF in english / a directory .idea
